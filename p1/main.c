@@ -3,24 +3,24 @@
 
 int main(void)
 {
-    int N, A=0, B=0, C=0, change;
+    int N, change;
     bool buy = false;
     
     scanf("%d", &N);
     change=N;
     
-    for (int i=1; N/(900*i)>0; i++) {
-        A++;
-        for (int j=1; N/(1500*j)>0; j++) {
-            B+=2;
-            for (int k=1; N/(200*k)>0; k++) {
-                C++;
+    for (int i=0; N/(900*i)>0; i++) {
+        i++;
+        for (int j=0; N/(750*j)>0; j++) {
+            j+=2;
+            for (int k=0; N/(200*k)>0; k++) {
+                k++;
                 
-                change = N - (900*A + 750*B + 200*C);
+                change = N - (900*i + 750*j + 200*k);
                 
-                if (change==0 && (C<A||C<B)) {
+                if (change==0 && (k<i||k<j)) {
                     buy = true;
-                    printf("%d %d %d\n", A, B, C);
+                    printf("%d %d %d\n", i, j, k);
                 }
                 
             }
