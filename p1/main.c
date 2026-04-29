@@ -1,4 +1,3 @@
-#include <stdbool.h>
 #include <stdio.h>
 
 int main(void)
@@ -9,12 +8,9 @@ int main(void)
     scanf("%d", &N);
     change=N;
     
-    for (int i=0; N/(900*i)>0; i++) {
-        i++;
-        for (int j=0; N/(750*j)>0; j++) {
-            j+=2;
-            for (int k=0; N/(200*k)>0; k++) {
-                k++;
+    for (int i=1; N/(900*i)>0; i++) {
+        for (int j=1; N/(750*j)>0; j++) {
+            for (int k=1; N/(200*k)>0; k++) {
                 
                 change = N - (900*i + 750*j + 200*k);
                 
