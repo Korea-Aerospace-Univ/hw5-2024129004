@@ -22,7 +22,7 @@ int main(void)
         
     }
     
-    if (!buy) printf("None\n");
+    if (!buy) printf("none\n");
 
     return 0;
 }
