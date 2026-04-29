@@ -9,11 +9,11 @@ int main(void)
     scanf("%d", &N);
     change=N;
     
-    for (int i=1; i<=11; i++) {
+    for (int i=1; N/(900*i)>0; i++) {
         A++;
-        for (int j=1; j<=6; j++) {
+        for (int j=1; N/(1500*j)>0; j++) {
             B+=2;
-            for (int k=1; k<=50; k++) {
+            for (int k=1; N/(200*k)>0; k++) {
                 C++;
                 
                 change = N - (900*A + 750*B + 200*C);
